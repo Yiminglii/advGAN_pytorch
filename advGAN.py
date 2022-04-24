@@ -112,6 +112,7 @@ class AdvGAN_Attack:
         return loss_D_GAN.item(), loss_G_fake.item(), loss_perturb.item(), loss_adv.item()
 
     def train(self, train_dataloader, epochs):
+        print("save both G and D")
         for epoch in range(1, epochs+1):
 
             if epoch == 50:
