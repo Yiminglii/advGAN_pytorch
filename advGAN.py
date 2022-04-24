@@ -150,4 +150,6 @@ class AdvGAN_Attack:
             if epoch%20==0:
                 netG_file_name = models_path + 'netG_epoch_' + str(epoch) + '.pth'
                 torch.save(self.netG.state_dict(), netG_file_name)
+                netD_file_name = models_path + 'netDisc_epoch_' + str(epoch) + '.pth'
+                torch.save(self.netDisc.state_dict(), netDisc_file_name)
 
